@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $(@)
+
+override_dh_builddeb:
+	dpkg-deb --nocheck --build debian/newline ../newline_1_all.deb
